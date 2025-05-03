@@ -62,9 +62,9 @@ header {
 }
 
 section {
-    height: 80vh;
+    height: 90vh;
     width: 100%;
-    /* border: 1px solid black; */
+    border: 1px inset #5f5f5fcc;
 
     &#home {
         background-color: #2ca1c8;
