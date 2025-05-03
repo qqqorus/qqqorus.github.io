@@ -116,10 +116,12 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        gap: 0;
+        padding: 70px;
     
         .hero-section {
             display: inline-flex;
-            width: 40%;
+            width: 45%;
             flex-wrap: wrap;
             gap: 20px;
     
@@ -170,7 +172,12 @@ section {
         }
 
         .image-desc {
-            width: 60%;
+            width: 55%;
+
+            #hero-img {
+                height: 400px;
+                width: 705px;
+            }
         }
     }
 }
