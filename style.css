@@ -90,12 +90,10 @@ header {
             box-shadow: -4px 4px #363555;
 
             &#login:hover, &#register:hover {
-                transition-timing-function: ease-in;
                 background-color: #d59303;
                 color: #fff;
                 cursor: pointer;
                 box-shadow: -2px 2px 2px #363555;
-                border: 2px solid #363555;
             }
         }
     }
@@ -105,15 +103,75 @@ section {
     height: 90vh;
     width: 100%;
 
-    &#home {
-        background-color: #2ca1c8;
-        border-top: 2px solid #00a2e9;
-    }
-
-    h2 {
+    h1 {
         text-align: center;
         font-family: 'Lexend Exa';
         color: #363555;
+        font-size: 32px;
+    }
+
+    &#home {
+        background-color: #2ca1c8;
+        border-top: 2px solid #00a2e9;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+        .hero-section {
+            display: inline-flex;
+            width: 40%;
+            flex-wrap: wrap;
+            gap: 20px;
+    
+            h1 {
+                display: inline-block;
+                margin: 0;
+                padding: 10px 20px;
+                border: 1px solid #fcefdb;
+                color: #fcefdb;
+                border-radius: 30px;
+
+                &#levelup {
+                    background-color: #fd92c8;
+                    color: #fcf8f1;
+                }
+
+                &#language {
+                    background-color: #85f1cb;
+                    color: #fcf8f1;
+                }
+
+                &#learn {
+                    background-color: #ffe586;
+                    color: #235d8e;
+                }
+            }
+
+            p {
+                text-align: justify;
+                margin: 10px 5px;
+                color: #fcefdb;
+            }
+
+            #conquest {
+                font-size: 16px;
+                background-color: #235d8e;
+                color: #fcefdb;
+                border: none;
+                border-radius: 20px;
+                padding: 10px 20px;
+                box-shadow: -4px 4px #363555;
+
+                &:hover {
+                    box-shadow: -2px 2px 2px #363555;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .image-desc {
+            width: 60%;
+        }
     }
 }
 
