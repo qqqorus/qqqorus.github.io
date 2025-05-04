@@ -189,9 +189,13 @@ section {
         .image-desc {
             width: 55%;
 
-            #hero-img {
+            #hero-video {
                 height: 400px;
                 width: 705px;
+
+                &:hover {
+                    
+                }
             }
         }
     }
