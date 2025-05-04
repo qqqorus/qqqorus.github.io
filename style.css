@@ -1,6 +1,24 @@
 * {
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    
+
+    h1 {
+        text-align: center;
+        font-family: 'Lexend Exa';
+        color: #363555;
+        font-size: 32px;
+        border-radius: 30px;
+        display: inline-block;
+        margin: 0;
+        padding: 10px 20px;
+        border: 1px solid #363555;
+    }
+
+    #learn {
+        background-color: #ffe586;
+        color: #235d8e;
+    }
 }
 
 body {
@@ -29,7 +47,7 @@ body {
 }
 
 header {
-    background-color: #339ec2;
+    background-color: #2ca1c8;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -103,13 +121,6 @@ section {
     height: 90vh;
     width: 100%;
 
-    h1 {
-        text-align: center;
-        font-family: 'Lexend Exa';
-        color: #363555;
-        font-size: 32px;
-    }
-
     &#home {
         background-color: #2ca1c8;
         border-top: 2px solid #00a2e9;
@@ -131,7 +142,6 @@ section {
                 padding: 10px 20px;
                 border: 1px solid #fcefdb;
                 color: #fcefdb;
-                border-radius: 30px;
 
                 &#levelup {
                     background-color: #fd92c8;
@@ -139,8 +149,13 @@ section {
                 }
 
                 &#language {
-                    background-color: #85f1cb;
+                    background-color: #3982bd;
                     color: #fcf8f1;
+                }
+
+                &#play {
+                    background-color: #85f1cb;
+                    color: #fcefdb;
                 }
 
                 &#learn {
@@ -180,9 +195,53 @@ section {
             }
         }
     }
+
+    &#courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0;
+        padding: 10px;
+
+        .courses-section {
+            display: inline;
+        }
+
+        #favorite {
+            background-color: #fd92c8;
+            color: #fcefdb;
+        }
+
+        #free {
+            background-color: #85f1cb;
+            color: #fcefdb;
+        }
+    }
+
+    &#why-lingua {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 0;
+        padding: 10px;
+
+        .why-section {
+            display: inline;
+        }
+
+        #linguaquest {
+            background-color: #2ca1c8;
+            color: #fcefdb;
+        }
+    }
 }
 
 hr {
     margin: 0;
     padding: 0;
+    height: 2px;
+    background-color: #6b6b6bbd;
+    border: none;
 }
