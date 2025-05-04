@@ -189,12 +189,6 @@ section {
             #hero-img {
                 height: 400px;
                 width: 705px;
-                animation: picture-play 6s;
-            }
-
-            @keyframes picture-play {
-                0% {background: url('images/1.png');}
-                100% {background: url('images/2.png');}
             }
         }
     }
