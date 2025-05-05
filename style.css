@@ -230,6 +230,7 @@ section {
                 white-space: nowrap;
                 scrollbar-width: none;
                 padding: 27px;
+                scroll-behavior: smooth;
             
                 span {
                     margin: 0px 10px;
