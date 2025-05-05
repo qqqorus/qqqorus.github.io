@@ -19,6 +19,10 @@
         background-color: #ffe586;
         color: #235d8e;
     }
+
+    .title-section {
+        display: inline;
+    }
 }
 
 body {
@@ -201,10 +205,6 @@ section {
         gap: 0;
         padding: 10px;
 
-        .title-section {
-            display: inline;
-        }
-
         #favorite {
             background-color: #fd92c8;
             color: #fcefdb;
@@ -223,10 +223,6 @@ section {
         justify-content: space-around;
         gap: 0;
         padding: 10px;
-
-        .title-section {
-            display: inline;
-        }
     }
 
     &#why-lingua {
@@ -236,14 +232,16 @@ section {
         justify-content: space-around;
         gap: 0;
         padding: 10px;
+        background-color: #ffe586;
 
-        .title-section {
-            display: inline;
-        }
+        h1 {
+            color: #235d8e;
+            border: 1px solid #235d8e;
 
-        #linguaquest {
-            background-color: #2ca1c8;
-            color: #fcefdb;
+            &#linguaquest {
+                background-color: #2ca1c8;
+                color: #fcefdb;
+            }
         }
     }
 
@@ -256,13 +254,29 @@ section {
         padding: 10px;
     }
 
-    &#blog {
+    &#blog-area {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
         gap: 0;
         padding: 10px;
+        background-color: #fd92c8;
+
+        h1 {
+            color: #fcefdb;
+            border: 1px solid #fcefdb;
+
+            &#explore {
+                background-color: #ffe586;
+                color: #235d8e;
+            }
+    
+            &#blog {
+                background-color: #2ca1c8;
+                color: #fcefdb;
+            }
+        }
     }
 
     &#faq {
@@ -272,9 +286,25 @@ section {
         justify-content: space-around;
         gap: 0;
         padding: 10px;
+        background-color: #85f1cb;
+
+        #frequently {
+            background-color: #2ca1c8;
+            color: #fcefdb;
+        }
+
+        #asked {
+            background-color: #ffe586;
+            color: #235d8e;
+        }
+
+        #questions {
+            background-color: #fd92c8;
+            color: #fcefdb;
+        }
     }
 
-    &#newsletter {
+    &#news-update {
         background-color: #2ca1c8;
         height: 400px;display: flex;
         flex-direction: column;
@@ -282,7 +312,26 @@ section {
         justify-content: space-around;
         gap: 0;
         padding: 10px;
+
+        h1 {
+            color: #fcefdb;
+            border: 1px solid #fcefdb;
+        
+            &#subscribe {
+                background-color: #fd92c8;
+            }
+    
+            &#newsletter {
+                background-color: #ffe586;
+                color: #235d8e;
+            }
+    
+            &#updates {
+                background-color: #85f1cb;
+            }
+        }
     }
+        
 }
 
 hr {
