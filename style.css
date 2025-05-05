@@ -214,6 +214,24 @@ section {
             background-color: #85f1cb;
             color: #fcefdb;
         }
+
+        .flag-carousel {
+            overflow: auto;
+            white-space: nowrap;
+
+            span {
+                margin: 0px 20px;
+
+                &.fi {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                background-color: none;
+            }
+        }
     }
 
     &#gamemodes {
