@@ -123,17 +123,16 @@ section {
     padding: 70px;
 
     &#home {
-        background-color: #2ca1c8;
+        background: linear-gradient(to right, #1e89ac, #2ca1c8);
         border-top: 2px solid #00a2e9;
         display: flex;
         align-items: center;
         justify-content: space-around;
         gap: 0;
-        /* padding: 70px; */
+        height: 90vh;
     
         .title-section {
             display: inline-flex;
-            width: 45%;
             flex-wrap: wrap;
             gap: 20px;
     
@@ -143,6 +142,7 @@ section {
                 padding: 10px 20px;
                 border: 1px solid #fcefdb;
                 color: #fcefdb;
+                font-size: 2.4em;
 
                 &#levelup {
                     background-color: #fd92c8;
@@ -167,6 +167,7 @@ section {
 
             p {
                 text-align: justify;
+                font-size: 20px;
                 margin: 10px 5px;
                 color: #fcefdb;
             }
@@ -189,11 +190,11 @@ section {
         }
 
         .image-desc {
-            width: 55%;
-
             #hero-img {
                 height: 400px;
-                width: 705px;
+                width: 800px;
+                right: 0;
+                z-index: 1;
             }
         }
     }
@@ -204,6 +205,8 @@ section {
         align-items: center;
         justify-content: space-around;
         gap: 0;
+        height: max-content;
+        padding: 50px 0px 10px;
 
         #favorite {
             background-color: #fd92c8;
@@ -242,47 +245,61 @@ section {
                 overflow: auto;
                 white-space: nowrap;
                 scrollbar-width: none;
-                padding: 27px 0px;
+                padding: 30px 0px;
                 scroll-behavior: smooth;
                 border-radius: 20px;
                 display: flex;
                 align-items: center;
                 
-                div {
+                > div {
                     display: block;
                     unicode-bidi: isolate;
+                    position: relative;
+                    margin: 0px 10px;
 
                     &:hover {
-                        display: block;
+                        .fi {
+                            transform: translateY(-20px);
+                            border: 5px solid #ffe586;
+                            box-shadow: 0 0 10px 3px #ffe586;
+                        }
+
+                        .flag-name {
+                            opacity: 1;
+                            visibility: visible;
+                        }
                     }
 
                     span {
-                        margin: 0px 10px;
+                        display: inline-block;
                         width: 80px;
                         height: 63px;
                         border: 5px solid #fff;
                         border-radius: 10px;
         
                         &.fi {
-                            transition: transform 0.5s;
-                            transition-timing-function: ease;
-                        
-                            &:hover {
-                                transform: translate(0px, -20px);
-                                border: 5px solid #ffe586;
-                                box-shadow: 0 0 10px 3px #ffe586;
-                            }
+                            transition: transform 0.5s ease;
                         }
                     }
     
                     .flag-name {
                         opacity: 0;
-                        position: relative;
-                        top: 8px;
-                        display: none;
+                        visibility: hidden;
+                        position: absolute;
+                        bottom: -20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: rgba(255, 229, 134, 0.8);
+                        color: #235d8e;
+                        padding: 4px 8px;
+                        border: 1px solid #235d8e;
+                        border-radius: 10px;
+                        font-size: 12px;
+                        white-space: nowrap;
+                        transition: opacity 0.3s ease;
+                        z-index: 10;
                     }
-                }
-                
+                } 
             }
         }
     }
