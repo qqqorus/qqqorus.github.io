@@ -595,4 +595,25 @@ hr {
 footer {
     height: 70vh;
     background-color: #fcefdb;
+
+    #footer-container {
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        height: max-content;
+        border: 1px solid black;
+
+        &.footer-details {
+            width: max-content;
+            height: 25%;
+            padding: 20px 0px;
+            border: 1px solid black;
+        }
+            
+        img {
+            height: 70px;
+        }
+    }
 }
