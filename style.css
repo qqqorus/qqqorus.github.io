@@ -310,6 +310,40 @@ section {
         align-items: center;
         justify-content: space-around;
         gap: 0;
+
+        #learning {
+            background-color: #ffe586;
+            color: #235d8e;
+        }
+
+        #gamemode {
+            background-color: #fd92c8;
+            color: #fcf8f1;
+        }
+
+        .gamemode-section {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 50px;
+            width: 100%;
+            margin: 5% 0%;
+
+            &#daily-quests {
+                width: 33.3%;
+            }
+
+            .gamemode-imgs {
+                height: 100px;
+            }
+
+            &#vocab-duels {
+                width: 33.3%;
+            }
+
+            &#team-challenges {
+                width: 33.3%;
+            }
+        }
     }
 
     &#why-lingua {
