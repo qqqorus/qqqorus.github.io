@@ -330,47 +330,59 @@ section {
 
             #daily-quests {
                 width: 33.3%;
-                border: 3px solid #97528e;
+                border: 5px solid #97528e;
                 border-radius: 40px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 padding: 3%;
+                transition: transform 1s ease;
 
                 p {
                     text-align: center;
+                    color: #97528e;
                 }
             }
 
             #vocab-duels {
                 width: 33.3%;
-                border: 3px solid #347c94;
+                border: 5px solid #347c94;
                 border-radius: 40px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 padding: 3%;
+                transition: transform 1s ease;
 
                 p {
                     text-align: center;
+                    color: #347c94;
                 }
             }
 
             #team-challenges {
                 width: 33.3%;
-                border: 3px solid #527536;
+                border: 5px solid #527536;
                 border-radius: 40px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 padding: 3%;
+                transition: transform 1s ease;
 
                 p {
                     text-align: center;
+                    color: #527536;
                 }
+            }
+
+            #daily-quests:hover, #vocab-duels:hover, #team-challenges:hover {
+                transform: translateY(-20px);
+                box-shadow: -10px 10px 10px #858585;
+                cursor: default;
             }
 
             .gamemode-imgs {
