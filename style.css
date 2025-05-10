@@ -328,20 +328,55 @@ section {
             width: 100%;
             margin: 5% 0%;
 
-            &#daily-quests {
+            #daily-quests {
                 width: 33.3%;
+                border: 3px solid #97528e;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3%;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            #vocab-duels {
+                width: 33.3%;
+                border: 3px solid #347c94;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3%;
+
+                p {
+                    text-align: center;
+                }
+            }
+
+            #team-challenges {
+                width: 33.3%;
+                border: 3px solid #527536;
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3%;
+
+                p {
+                    text-align: center;
+                }
             }
 
             .gamemode-imgs {
                 height: 100px;
-            }
+                width: max-content;
 
-            &#vocab-duels {
-                width: 33.3%;
-            }
-
-            &#team-challenges {
-                width: 33.3%;
             }
         }
     }
