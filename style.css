@@ -159,17 +159,17 @@ section {
 
                 &#levelup {
                     background-color: #fd92c8;
-                    color: #fcf8f1;
+                    color: #fff;
                 }
 
                 &#language {
                     background-color: #00a2e9;
-                    color: #fcf8f1;
+                    color: #fff;
                 }
 
                 &#play {
                     background-color: #85f1cb;
-                    color: #fcefdb;
+                    color: #fff;
                 }
 
                 &#learn {
@@ -223,12 +223,12 @@ section {
 
         #favorite {
             background-color: #fd92c8;
-            color: #fcefdb;
+            color: #fff;
         }
 
         #free {
             background-color: #85f1cb;
-            color: #fcefdb;
+            color: #fff;
         }
 
         .flag-carousel {
@@ -336,7 +336,7 @@ section {
 
             &#gamemode {
                 background-color: #fd92c8;
-                color: #fcf8f1;
+                color: #fff;
             }
         }
 
@@ -507,7 +507,7 @@ section {
 
             &#linguaquest {
                 background-color: #2ca1c8;
-                color: #fcefdb;
+                color: #fff;
             }
         }
     }
@@ -529,8 +529,8 @@ section {
         background-color: #fd92c8;
 
         h1 {
-            color: #fcefdb;
-            border: 1px solid #fcefdb;
+            color: #fff;
+            border: 1px solid #fff;
 
             &#explore {
                 background-color: #ffe586;
@@ -539,7 +539,7 @@ section {
     
             &#blog {
                 background-color: #2ca1c8;
-                color: #fcefdb;
+                color: #fff;
             }
         }
     }
@@ -554,7 +554,7 @@ section {
 
         #frequently {
             background-color: #2ca1c8;
-            color: #fcefdb;
+            color: #fff;
         }
 
         #asked {
@@ -564,7 +564,7 @@ section {
 
         #questions {
             background-color: #fd92c8;
-            color: #fcefdb;
+            color: #fff;
         }
     }
 
@@ -577,8 +577,8 @@ section {
         gap: 50px;
 
         h1 {
-            color: #fcefdb;
-            border: 1px solid #fcefdb;
+            color: #fff;
+            border: 1px solid #fff;
         
             &#subscribe {
                 background-color: #fd92c8;
@@ -594,7 +594,7 @@ section {
             }
         }
 
-        #form-area {
+        .form-area {
             width: max-content;
         }
 
@@ -654,8 +654,7 @@ section {
                 border: 1px inset #ecb132;
             }
         }
-    }
-        
+    }  
 }
 
 footer {
