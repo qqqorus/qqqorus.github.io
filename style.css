@@ -1,6 +1,7 @@
 * {
     font-family: 'Lexend', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    cursor: default;
     
 
     h1 {
@@ -111,7 +112,7 @@ header {
             color: #fff;
             font-weight: 500;
             background: #da9e19;
-            border: 1px solid #ecb132;
+            border: 1px outset #ecb132;
             padding: 3px 7px;
             box-shadow: -4px 4px #363555;
 
@@ -120,6 +121,10 @@ header {
                 color: #fff;
                 cursor: pointer;
                 box-shadow: -2px 2px 2px #363555;
+            }
+
+            &#login:active, &#register:active {
+                border: 1px inset #ecb132;
             }
         }
     }
@@ -589,24 +594,65 @@ section {
             }
         }
 
-        &#form-area {
-            width: 100vw;
+        #form-area {
+            width: max-content;
+        }
+
+        form {
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
         }
 
         input {
-            width: 550px;
+            width: 650px;
             font-size: 1.3em;
             border-radius: 30px;
             padding: 10px 30px;
+            background-color: #f3f4f6;
+            color: #000;
+            border: none;
+            transition: transform 1s ease-in;
+            z-index: 10;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 1px 2px 0 #0000000d;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 0.3s;
+            
+            &:hover {
+                box-shadow: 0 10px 15px -3px #0000001a;
+                border-color: #ecb132;
+                cursor: text;
+            }
+            
+            &:focus {
+                outline: 2px solid #ecb132;
+                outline-offset: 2px;
+                transform: translateY(-5px); 
+            }
         }
 
         button {
-            width: 50%;
             font-size: 1.3em;
+            border-radius: 30px;
+            border: 1px outset #ecb132;
+            padding: 10px 20px;
+            background-color: #da9e19;
+            color: #fff;
+            box-shadow: -4px 4px #363555;
+
+            &:hover{
+                background-color: #d59303;
+                color: #fff;
+                cursor: pointer;
+                box-shadow: -2px 2px 2px #363555;
+            }
+
+            &:active {
+                border: 1px inset #ecb132;
+            }
         }
     }
         
@@ -647,6 +693,11 @@ footer {
         
             p {
                 color: #555;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
             }
         }
 
