@@ -23,10 +23,18 @@
     .title-section {
         display: inline;
     }
+
+    hr {
+        margin: 0;
+        padding: 0;
+        height: 2px;
+        background-color: #6b6b6bbd;
+        border: none;
+    }
 }
 
 body {
-    background-color: beige;
+    background-color: #fcefdb;
     margin: 0;
     padding: 0;
     max-width: 100%;
@@ -346,7 +354,7 @@ section {
                 position: relative;
                 background: #fff;
                 z-index: 1;
-                color: #97528e;
+                color: #793e71;
 
                 &::before {
                     content: '';
@@ -357,7 +365,7 @@ section {
                     bottom: -5px;
                     border: 5px solid #97528e;
                     border-radius: 20%;
-                    background: linear-gradient(45deg, currentColor, #ffffff, currentColor);
+                    background: linear-gradient(45deg, currentColor, #97528e, #ffffff, #97528e, currentColor);
                     background-size: 200% 200%;
                     z-index: -1;
                     opacity: 0.8;
@@ -390,7 +398,7 @@ section {
                 position: relative;
                 background: #fff;
                 z-index: 1;
-                color: #347c94;
+                color: #1c5568;
 
                 &::before {
                     content: '';
@@ -401,7 +409,7 @@ section {
                     bottom: -5px;
                     border: 5px solid #347c94;
                     border-radius: 20%;
-                    background: linear-gradient(45deg, currentColor, #ffffff, currentColor);
+                    background: linear-gradient(45deg, currentColor, #347c94, #ffffff, #347c94, currentColor);
                     background-size: 200% 200%;
                     z-index: -1;
                     opacity: 0.8;
@@ -434,7 +442,7 @@ section {
                 position: relative;
                 background: #fff;
                 z-index: 1;
-                color: #527536;
+                color: #3b5824;
 
                 &::before {
                     content: '';
@@ -445,7 +453,7 @@ section {
                     bottom: -5px;
                     border: 5px solid #527536;
                     border-radius: 20%;
-                    background: linear-gradient(45deg, currentColor, #ffffff, currentColor);
+                    background: linear-gradient(45deg, currentColor, #527536, #ffffff, #527536, currentColor);
                     background-size: 200% 200%;
                     z-index: -1;
                     opacity: 0.8;
@@ -561,7 +569,7 @@ section {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        gap: 0;
+        gap: 50px;
 
         h1 {
             color: #fcefdb;
@@ -580,38 +588,68 @@ section {
                 background-color: #85f1cb;
             }
         }
+
+        &#form-area {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        input {
+            width: 550px;
+            font-size: 1.3em;
+            border-radius: 30px;
+            padding: 10px 30px;
+        }
+
+        button {
+            width: 50%;
+            font-size: 1.3em;
+        }
     }
         
 }
 
-hr {
-    margin: 0;
-    padding: 0;
-    height: 2px;
-    background-color: #6b6b6bbd;
-    border: none;
-}
-
 footer {
-    height: 70vh;
+    height: max-content;
     background-color: #fcefdb;
+    padding: 0px;
 
     #footer-container {
-        bottom: 0;
-        right: 0;
+        margin: 50px 0px;
+        padding: 20px;
         display: flex;
         justify-content: center;
-        gap: 50px;
         height: max-content;
-        border: 1px solid black;
+        gap: 25%;
+        flex-wrap: nowrap;
 
-        &.footer-details {
-            width: max-content;
-            height: 25%;
-            padding: 20px 0px;
-            border: 1px solid black;
+        #linguaquest-footer-info {
+            width: 430px;
+
+            p {
+                color: #555;
+                text-align: justify;
+            }
         }
-            
+
+        #grouped-footer {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+        }
+
+        .footer-details {
+            width: max-content;
+            height: max-content;
+        
+            p {
+                color: #555;
+            }
+        }
+
         img {
             height: 70px;
         }
