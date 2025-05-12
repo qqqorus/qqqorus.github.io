@@ -119,8 +119,11 @@ header {
             &#login:hover, &#register:hover {
                 background-color: #d59303;
                 color: #fff;
-                cursor: pointer;
                 box-shadow: -2px 2px 2px #363555;
+            }
+
+            a:hover {
+                cursor: pointer;
             }
 
             &#login:active, &#register:active {
@@ -602,6 +605,10 @@ section {
             display: flex;
             flex-direction: column;
             gap: 10px;
+
+            .questions-details {
+                transition: height 0.2s ease;
+            }
         }
 
         details {
@@ -611,7 +618,6 @@ section {
             color: #363555;
             font-size: 22px;
             overflow: hidden;
-            transition: max-height 400ms ease-out;
 
             :hover {
                 cursor: pointer;
