@@ -9,7 +9,7 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.3.2/css/flag-icons.min.css">
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <header>
@@ -245,8 +245,15 @@
         <div id="form-area">
             <form>
                 <input type="text" placeholder="Enter Your Email"><br>
-                <button type="submit">Subscribe</button>
+                <button type="submit" id="subscribeButton">Subscribe</button>
             </form>
+        </div>
+        <div id="subscriptionSuccessPopup" class="popup">
+            <div class="popup-content">
+                <h1>🎉 Success!</h1>
+                <span class="close-button">&times;</span>
+                <p>You've successfully subscribed to our newsletter!</p>
+            </div>
         </div>
     </section>
     <hr>
@@ -280,5 +287,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
