@@ -314,3 +314,167 @@ div {
         }
     }
 }
+
+/* responsive adjustments for premium page */
+
+/* Base fixes for scrolling and layout */
+body {
+    overflow-y: auto; /* Ensure body can scroll */
+    min-height: 100vh;
+}
+
+.premium-main {
+    overflow-y: auto; /* Enable scrolling */
+    height: 94vh; /* Maintain viewport height */
+}
+
+@media (max-width: 1200px) {
+    /* Tablet landscape and small desktop */
+    .sidebar-container {
+        width: 20%;
+        padding: 25px;
+    }
+    
+    .premium-main {
+        margin-left: 22%;
+        padding: 25px;
+        
+        h1 {
+            font-size: 2em; /* Smaller heading */
+        }
+        
+        section {
+            gap: 20px; /* Reduce gap between tiers */
+            
+            div {
+                width: 300px; /* Slightly narrower cards */
+                padding: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet portrait */
+    .sidebar-container {
+        width: 25%;
+        padding: 20px;
+    }
+    
+    .premium-main {
+        margin-left: 27%;
+        padding: 20px;
+        
+        section {
+            flex-wrap: wrap; /* Allow tiers to wrap */
+            justify-content: center;
+            
+            div {
+                width: 45%; /* Two columns */
+                min-width: 280px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile landscape and small tablets */
+    body {
+        overflow-x: hidden;
+        padding: 5px;
+    }
+    
+    .sidebar-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    
+    .premium-main {
+        margin-left: 0;
+        height: auto;
+        min-height: calc(100vh - 150px); /* Dynamic height */
+        padding: 15px;
+        
+        #premium-header {
+            flex-direction: column; /* Stack header text */
+            gap: 10px;
+        }
+        
+        h1 {
+            font-size: 1.8em;
+            width: 100%;
+        }
+        
+        section {
+            flex-direction: column; /* Stack tiers vertically */
+            gap: 25px;
+            
+            div {
+                width: 100%; /* Full width cards */
+                max-width: 400px;
+                margin: 0 auto;
+                
+                &:hover {
+                    transform: translateY(-10px) scale(1.03); /* Reduce hover effect on mobile */
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile portrait */
+    .premium-main {
+        h1 {
+            font-size: 1.6em;
+            padding: 8px 15px;
+        }
+        
+        small {
+            font-size: 1em;
+        }
+        
+        section div {
+            padding: 20px;
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            button {
+                width: 70%; /* Wider button for mobile */
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    /* Very small screens */
+    .premium-main {
+        padding: 10px;
+        
+        section div {
+            padding: 15px;
+            border-radius: 20px;
+            
+            ul {
+                margin: 15px 0;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
+
+/* Special hover state adjustments for touch devices */
+@media (hover: none) {
+    .premium-main section div {
+        &:hover {
+            transform: none !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+        }
+    }
+}

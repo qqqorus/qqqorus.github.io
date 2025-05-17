@@ -261,3 +261,172 @@ div {
         width: 100%;
     }
 }
+
+/* responsive adjustments for settings page */
+
+/* Base fixes for scrolling and layout */
+body {
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+.settings-main {
+    overflow-y: auto;
+    height: 94vh;
+}
+
+@media (max-width: 1200px) {
+    /* Tablet landscape and small desktop */
+    .sidebar-container {
+        width: 20%;
+        padding: 25px;
+    }
+    
+    .settings-main {
+        margin-left: 22%;
+        padding: 10px 25px;
+        
+        h1 {
+            font-size: 2em;
+        }
+        
+        #first-row {
+            flex-direction: column; /* Stack difficulty and quest sections */
+            gap: 20px;
+            
+            #difficulty, #quest {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet portrait */
+    .sidebar-container {
+        width: 25%;
+        padding: 20px;
+    }
+    
+    .settings-main {
+        margin-left: 27%;
+        padding: 10px 20px;
+        
+        div {
+            padding: 0px 20px;
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile landscape and small tablets */
+    body {
+        overflow-x: hidden;
+        padding: 5px;
+    }
+    
+    .sidebar-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        padding: 15px;
+    }
+    
+    .settings-main {
+        margin-left: 0;
+        height: auto;
+        min-height: calc(100vh - 150px);
+        padding: 10px 15px;
+        
+        h1 {
+            font-size: 1.8em;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        div {
+            padding: 0px 15px;
+            
+            input[type=text], 
+            select {
+                width: 100%; /* Full width inputs */
+                margin-bottom: 10px;
+            }
+            
+            button[type=submit] {
+                width: 100%; /* Full width buttons */
+                padding: 8px;
+            }
+        }
+        
+        hr {
+            margin: 10px 0;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile portrait */
+    .settings-main {
+        h1 {
+            font-size: 1.6em;
+            padding: 8px 15px;
+        }
+        
+        div {
+            h2 {
+                font-size: 1.3em;
+            }
+            
+            p, small {
+                font-size: 1em;
+            }
+            
+            input[type=checkbox], 
+            input[type=radio] {
+                transform: scale(1.2); /* Larger touch targets */
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    /* Very small screens */
+    .settings-main {
+        padding: 10px;
+        
+        div {
+            padding: 0px 10px;
+            
+            #delete {
+                margin-top: 10px; /* Add space above delete button */
+            }
+        }
+        
+        .setting-cat {
+            padding-top: 5px;
+        }
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .settings-main {
+        button[type=submit] {
+            padding: 10px; /* Larger touch targets */
+            font-size: 1.2em;
+        }
+    }
+}
