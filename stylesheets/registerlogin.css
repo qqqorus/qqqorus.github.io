@@ -370,3 +370,72 @@ body {
         }
     }
 }
+
+/* responsive adjustments */
+
+@media (max-width: 768px) {
+    /* Container stacks vertically on mobile */
+    .register-container {
+        flex-direction: column;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    /* Register section full-width */
+    .register-container .register,
+    .register-container .login,
+    .register-container .login-redirect,
+    .register-container .register-redirect {
+        width: 100%;
+        border-radius: 20px;
+        padding: 30px 20px;
+    }
+
+    /* Adjust input fields for smaller screen */
+    .register-container input,
+    .register-container button {
+        width: 100% !important;
+        font-size: 1.1em;
+    }
+
+    /* Smaller logo and spacing */
+    .register-container #logo-container img {
+        height: 50px;
+    }
+
+    /* Center all text and elements */
+    .register-container #text-container {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* Headings scale down */
+    .register-container h1 {
+        font-size: 1.6em !important;
+        text-align: center;
+    }
+
+    /* Adjust paragraph text */
+    .register-container p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    /* Button size tweaks */
+    .register-container button {
+        font-size: 1em;
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    /* Smaller account display gap */
+    #account-display {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #account-display .brands {
+        font-size: 1.2em;
+    }
+}
