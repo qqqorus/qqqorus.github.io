@@ -646,19 +646,110 @@ div {
 }
 
 /* Responsive Adjustments */
+
 @media (max-width: 1200px) {
+    /* Adjust layout for tablets and smaller screens */
     .dashboard-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .leaderboard-card {
+        width: 100%; /* Full width for leaderboard on medium screens */
+        margin: 20px 0;
     }
 }
 
 @media (max-width: 768px) {
-    .dashboard-grid {
-        grid-template-columns: 1fr;
+    /* Mobile-specific styles */
+    body {
+        padding: 5px;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
     
-    .xp-display {
-        flex-direction: column;
-        text-align: center;
+    .sidebar-container {
+        position: relative; /* Change from fixed to relative */
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+        padding: 20px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+    }
+    
+    .dashboard-main {
+        margin-left: 0; /* Remove sidebar margin */
+        height: auto;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    
+    .container-dash {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px;
+    }
+    
+    .header-container {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start;
+    }
+    
+    #dashboard-header {
+        flex-direction: column; /* Stack header text */
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    
+    .search-container {
+        width: 100%; /* Full width search */
+        margin-bottom: 15px;
+    }
+    
+    .search-container input {
+        width: 100%; /* Full width input */
+    }
+    
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        width: 100%; /* Full width */
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    /* Adjust card styles for mobile */
+    .dashboard-card {
+        padding: 15px;
+    }
+    
+    .progress-bar {
+        width: 80%; /* Wider progress bar for better visibility */
+    }
+    
+    .lingua img {
+        width: 200px; /* Smaller logo */
+    }
+    
+    /* Hide some elements on mobile if needed */
+    .premium-ribbon {
+        font-size: 0.9em; /* Smaller ribbon text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small devices adjustments */
+    h1 {
+        font-size: 2em; /* Smaller heading */
+    }
+    
+    .dashboard-card h2 {
+        font-size: 1.2em; /* Smaller card titles */
+    }
+    
+    .search-container input {
+        font-size: 1em; /* Smaller font for search */
+    }
+    
+    /* Adjust button sizes */
+    .continue-btn, .quest-btn, .view-all-btn, .premium-btn {
+        padding: 6px 12px;
+        font-size: 1em;
     }
 }

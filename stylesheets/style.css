@@ -892,3 +892,191 @@ footer {
         }
     }
 }
+
+/* Responsive adjustemtns */
+
+@media (max-width: 1200px) {
+    /* Tablet and small desktop adjustments */
+    header {
+        gap: 50px; /* Reduce header gap */
+        padding: 0 20px; /* Add some padding */
+    }
+
+    section#home .image-desc #hero-img {
+        width: 600px; /* Smaller hero image */
+        height: 300px;
+    }
+
+    section#courses .flag-carousel {
+        width: 90%; /* Wider flag carousel */
+    }
+
+    section#blog-area .blog-container {
+        flex-direction: column; /* Stack blog posts */
+        align-items: center;
+    }
+
+    section#faq .questions-container {
+        width: 90%; /* Wider FAQ container */
+    }
+
+    section#news-update input {
+        width: 500px; /* Smaller newsletter input */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Large tablet adjustments */
+    section {
+        padding: 50px 30px; /* Reduce section padding */
+    }
+
+    section#home {
+        flex-direction: column; /* Stack home content */
+        text-align: center;
+        height: auto;
+        padding: 50px 30px;
+
+        .title-section {
+            justify-content: center;
+        }
+    }
+
+    section#gamemodes .gamemode-section {
+        flex-direction: column; /* Stack game modes */
+        align-items: center;
+        gap: 30px;
+
+        #daily-quests, 
+        #vocab-duels, 
+        #team-challenges {
+            width: 80%; /* Wider game mode cards */
+            margin-bottom: 30px;
+        }
+    }
+
+    footer #footer-container {
+        gap: 15%; /* Reduce footer gap */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablet and mobile adjustments */
+    header {
+        flex-direction: column; /* Stack header content */
+        gap: 15px;
+        padding: 15px;
+
+        img {
+            margin: 10px auto; /* Center logo */
+        }
+
+        nav {
+            flex-direction: column; /* Stack nav items */
+            align-items: center;
+            gap: 10px;
+
+            .dropdown-lang {
+                margin: 0; /* Reset margin */
+            }
+        }
+    }
+
+    .video-popup {
+        width: 90%; /* Wider video popup */
+        right: 5%; /* Center horizontally */
+    }
+
+    section#courses .flag-carousel {
+        width: 100%; /* Full width flag carousel */
+    }
+
+    section#faq .questions-container {
+        width: 100%; /* Full width FAQ */
+    }
+
+    section#news-update input {
+        width: 100%; /* Full width input */
+        max-width: 400px; /* But not too wide */
+    }
+
+    footer #footer-container {
+        flex-direction: column; /* Stack footer content */
+        gap: 30px;
+        text-align: center;
+
+        #linguaquest-footer-info {
+            width: 100%; /* Full width footer info */
+        }
+
+        #grouped-footer {
+            justify-content: center; /* Center grouped footer */
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile-specific adjustments */
+    * h1 {
+        font-size: 1.8em; /* Smaller headings */
+    }
+
+    section {
+        padding: 30px 15px; /* Reduce section padding */
+    }
+
+    section#home .title-section h1 {
+        font-size: 1.8em; /* Smaller home headings */
+    }
+
+    section#home .image-desc #hero-img {
+        width: 100%; /* Responsive hero image */
+        height: auto;
+    }
+
+    section#gamemodes .gamemode-section {
+        #daily-quests, 
+        #vocab-duels, 
+        #team-challenges {
+            width: 100%; /* Full width game modes */
+            border-radius: 15px; /* Adjust border radius */
+        }
+    }
+
+    section#blog-area .blog {
+        padding: 20px; /* Reduce blog padding */
+        width: 100%; /* Full width blogs */
+    }
+
+    section#news-update {
+        gap: 30px; /* Reduce gap */
+    }
+
+    .popup-content {
+        width: 90%; /* Responsive popup */
+        max-width: none;
+    }
+
+    /* Adjust flag carousel for mobile */
+    section#courses .flag-carousel .flags-container > div span {
+        width: 60px; /* Smaller flags */
+        height: 45px;
+    }
+}
+
+/* Special cases for very small screens */
+@media (max-width: 400px) {
+    header nav button {
+        font-size: 13px; /* Smaller buttons */
+        padding: 2px 5px;
+    }
+
+    section#home .title-section p {
+        font-size: 16px; /* Smaller text */
+    }
+
+    section#courses .flag-carousel button {
+        margin: 10px; /* Smaller margins */
+        padding: 3px;
+    }
+}
