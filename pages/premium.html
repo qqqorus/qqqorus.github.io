@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaQuest: Premium</title>
+    <link rel="stylesheet" href="/stylesheets/premium.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="sidebar-container">
+        <img src="/images/logo-icon.png"><br>
+        <h1>LinguaQuest</h1>
+        <br>
+        <p>General</p>
+        <div>
+            <a onclick="clickDashboard()"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
+            <a onclick="clickLessons()"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
+            <a onclick="clickNotifications()"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
+            <a onclick="clickPvpArea()"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
+            <a onclick="clickProfile()"><i class="fa-solid fa-user"></i>&emsp;Profile</a>
+        </div>
+        <br>
+        <p>Tools</p>
+        <div>
+            <a onclick="clickSettings()"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
+            <a class="selected premium yellow"><i class="fas fa-crown"></i>&emsp;Premium</a><br>
+            <a onclick="if(confirm('Log out?')){window.location.href='/index.html'}"><i class="fa-solid fa-right-from-bracket"></i>&emsp;Log Out</a>
+        </div>
+    </div>
+
+    <main class="premium-main">
+        <div id="premium-header">
+            <h1 id="premium">Premium</h1><h1 id="features">Features! 🎉</h1>
+        </div>
+        <small>30-days Free Trial for New Users!</small>
+        <section>
+            <div id="tier1">
+                <h2>Tier 1</h2>
+                <h3>&pound;5/month</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Custom Avatar</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Exclusive Themes</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Advanced Analytics Dashboard</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;VIP Leaderboards</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;"Grammar Shield" Subscriptions</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Priority Matchmaking</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;"Pro Quests"</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Early Access</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Custom Chat Badges</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Private Groups</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;"XP to Real Rewards"</li>
+                </ul>
+                <button onclick="document.getElementById('confetti').play()" class="upgradeButton">Upgrade</button>
+                <audio src="/audios/confetti.mp3" id="confetti"></audio>
+            </div>
+            <div id="tier2">
+                <h2>Tier 2</h2>
+                <h3>&pound;10/month</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Custom Avatar</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Exclusive Themes</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Advanced Analytics Dashboard</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;VIP Leaderboards</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;"Grammar Shield" Subscriptions</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Priority Matchmaking</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;"Pro Quests"</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Early Access</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Custom Chat Badges</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;Private Groups</li>
+                    <li class="not-included"><i class="fa-regular fa-circle-check"></i>&emsp;"XP to Real Rewards"</li>
+                </ul>
+                <button onclick="document.getElementById('confetti').play()" class="upgradeButton">Upgrade</button>
+                <audio src="/audios/confetti.mp3" id="confetti"></audio>
+            </div>
+            <div id="tier3">
+                <h2>Tier 3</h2>
+                <h3>&pound;20/month</h3>
+                <ul>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Custom Avatar</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Exclusive Themes</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Advanced Analytics Dashboard</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;VIP Leaderboards</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;"Grammar Shield" Subscriptions</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Priority Matchmaking</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;"Pro Quests"</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Early Access</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Custom Chat Badges</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;Private Groups</li>
+                    <li><i class="fa-solid fa-circle-check"></i>&emsp;"XP to Real Rewards"</li>
+                </ul>
+                <button onclick="document.getElementById('confetti').play()" class="upgradeButton">Upgrade</button>
+                <audio src="/audios/confetti.mp3" id="confetti"></audio>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/premium.js"></script>
+</body>
+</html>

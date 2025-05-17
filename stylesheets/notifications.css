@@ -1,0 +1,201 @@
+* {
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+
+    h1 {
+        text-align: center;
+        font-family: 'Lexend Exa';
+        color: #363555;
+        font-size: 3em;
+        border-radius: 60px;
+        display: inline-block;
+        margin: 0;
+        padding: 10px 20px;
+        border: 1px solid #363555;
+    }
+}
+
+body {
+    background-color: #faf4e4;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.sidebar-container {
+    background-color: #000;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    border-radius: 30px;
+    padding: 35px;
+    margin: 0;
+    width: 15%;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    img {
+        height: 60px;
+        display: block;
+        margin: 0px auto;
+    }
+}
+
+h1 {
+    color: #fff;
+    margin: 0px;
+    font-size: 1em;
+    display: inline-block;
+    border: 1px solid #fff;
+}
+
+p {
+    color: #999;
+    margin: 10px 0px;
+    font-size: .9em;
+}
+
+div {
+    list-style-type: none;
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    a {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    
+        &:hover:not(.selected) {
+            color: #999;
+            cursor: pointer;
+        }
+    }
+}
+
+.selected {
+    border-radius: 30px;
+    width: 100%;
+    animation: moveSelectorDown 1s ease;
+}
+
+.pink {
+    background-color: #fd92c8;
+}
+
+.green {
+    background-color: #85f1cb;
+    color: #363555;
+}
+
+.yellow {
+    background-color: #ffe586;
+    color: #363555;
+}
+
+.blue {
+    background-color: #00a2e9;
+}
+
+
+@keyframes moveSelectorDown {
+    0% {transform: translateY(0%)}
+    50% {transform: translateY(10%);}
+    100% {transform: translateY(0%);}
+}
+
+.premium:not(.selected) {
+    animation: premiumColor 3s infinite;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+@keyframes premiumColor {
+    20% {color: #ffb62c;}
+    40% {color: #fe881e;}
+    60% {color: #f45f72;}
+    80% {color: #975cf6;}
+    100% {color: #ec93ed;}
+
+}
+
+/* START OF NOTIFICATIONS STYLE */
+
+.notifications-main {
+    margin-left: 17%;
+    height: 94vh;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, #fd92c8ab 0%, #ffffffab 50%, #fd92c8ab 100%);
+    border-radius: 30px;
+
+    h1 {
+        color: #fff;
+        background-color: #fd92c8;
+        border: 1px solid #363555;
+        font-size: 2.3em;
+        text-align: left;
+        padding: 10px 20px;
+        order: 0;
+        margin: 20px 0px;
+    }
+
+    .notif-container {
+        display: flex;
+        align-items: center;
+        margin: 15px 20px 0px;
+        flex-direction: row;
+        border: 1px solid #363555;
+        border-radius: 30px;
+        padding: 20px 30px;
+        background-color: #fff;
+        color: #363555;
+
+        .notif-content {
+            text-align: left;
+            gap: 10px;
+
+            h3 {
+                font-size: 1.4em;
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                font-size: 1.1em;
+            }
+        }
+
+        .notif-date {
+            text-align: right;
+            width: 30%;
+
+            small {
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    .notif-container:hover {
+        box-shadow: 2px 2px 5px gray;
+        cursor: pointer;
+    }
+
+    .read {
+        background-color: #e8e8e8ab;
+        color: #999;
+        border: 1px solid #999;
+    }
+}

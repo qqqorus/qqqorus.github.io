@@ -3,9 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LinguaQuest: Your Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="sidebar-container">
+        <img src="/images/logo-icon.png"><br>
+        <h1>LinguaQuest</h1>
+        <br>
+        <p>General</p>
+        <div>
+            <a class="selected green"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
+            <a onclick="clickLessons()"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
+            <a onclick="clickNotifications()"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
+            <a onclick="clickPvpArea()"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
+            <a onclick="clickProfile()"><i class="fa-solid fa-user"></i>&emsp;Profile</a>
+        </div>
+        <br>
+        <p>Tools</p>
+        <div>
+            <a onclick="clickSettings()"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
+            <a onclick="clickPremium()" class="premium"><i class="fas fa-crown"></i>&emsp;Premium</a><br>
+            <a onclick="if(confirm('🚪 Log out?')){window.location.href='/index.html'}"><i class="fa-solid fa-right-from-bracket"></i>&emsp;Log Out</a>
+        </div>
+    </div>
+
+    <main class="dashboard-main">
+            <div class="header-container">
+                <div id="dashboard-header">
+                    <h1 id="hello">Hello,</h1>
+                    <h1 id="user">User! 👋</h1>
+                </div>
+                
+                <!-- search bar -->
+                <div class="search-container">
+                    <form>
+                        <input type="search" placeholder="Search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+
+        <div class="container-dash">
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Course Progress -->
+                <div class="dashboard-card progress-card">
+                    <h2><i class="fas fa-book-open"></i> Course Progress</h2>
+                    <div class="progress-container">
+                        <div class="course-details">
+                            <div class="course-icon">📝</div>
+                            <h3>French Basics</h3>
+                            <p>Last Lesson: Food & Dining</p>
+                            <div class="progress-bar" style="--progress: 72%">
+                                <span>72% Complete</span>
+                            </div>
+                            <button class="continue-btn">Continue Learning</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Today's Quest -->
+                <div class="dashboard-card quest-card">
+                    <h2><i class="fas fa-scroll"></i> Today's Quest</h2>
+                    <div class="quest-content">
+                        <div class="quest-icon">🎯</div>
+                        <h3>Use 5 adjectives in chat</h3>
+                        <p>Reward: 50 XP + "Word Smith" badge</p>
+                        <div class="quest-progress">
+                            <span>3/5 completed</span>
+                            <div class="progress-bar-small" style="--progress: 60%"></div>
+                        </div>
+                        <button class="quest-btn">Start Quest</button>
+                    </div>
+                </div>
+                
+                <!-- XP/Level Snapshot -->
+                <div class="dashboard-card xp-card">
+                    <h2><i class="fas fa-trophy"></i> Your Stats</h2>
+                    <div class="xp-display">
+                        <div class="level-circle">
+                            <span>8</span>
+                            <div class="level-progress" style="--progress: 65%"></div>
+                        </div>
+                        <div class="xp-details">
+                            <h3>320/500 XP</h3>
+                            <p>Next level: "Grammar Gladiator"</p>
+                            <div class="streak-counter">
+                                <i class="fas fa-fire"></i> 7-day streak
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recommendations -->
+                <div class="dashboard-card reco-card">
+                    <h2><i class="fas fa-lightbulb"></i> For You</h2>
+                    <div class="reco-content">
+                        <div class="reco-item">
+                            <i class="fas fa-chevron-circle-right"></i>
+                            <p>Practice past tense verbs (your weak area)</p>
+                        </div>
+                        <div class="reco-item">
+                            <i class="fas fa-chevron-circle-right"></i>
+                            <p>Try our new "Slang Dictionary" at Level 10</p>
+                        </div>
+                        <div class="reco-item">
+                            <i class="fas fa-chevron-circle-right"></i>
+                            <p>Join the French conversation club</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Widget -->
+                <div class="dashboard-card premium-card">
+                    <div class="premium-ribbon">PREMIUM</div>
+                    <h2><i class="fas fa-crown"></i> Unlock More!</h2>
+                    <div class="premium-content">
+                        <ul class="premium-features">
+                            <li><i class="fas fa-check-circle"></i> Double XP gains</li>
+                            <li><i class="fas fa-check-circle"></i> Exclusive quests</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check-circle"></i> Ad-free experience</li>
+                        </ul>
+                        <button class="premium-btn">Upgrade Now</button>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="lingua">
+                        <img src="/images/logo-dark.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="dashboard-card leaderboard-card">
+                <h2><i class="fas fa-medal"></i> Leaderboard</h2>
+                <div class="leaderboard-content">
+                    <div class="leaderboard-top3">
+                        <div class="top-player">
+                            <span class="rank">1</span>
+                            <span class="name">@PolyglotPro</span>
+                            <span class="xp">1,200 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">2</span>
+                            <span class="name">@LinguaQueen</span>
+                            <span class="xp">1,150 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">3</span>
+                            <span class="name">@WordNinja</span>
+                            <span class="xp">1,100 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">4</span>
+                            <span class="name">@SuperStreaker</span>
+                            <span class="xp">1,050 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">5</span>
+                            <span class="name">@BingoBeaver</span>
+                            <span class="xp">1,000 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">6</span>
+                            <span class="name">@Impala</span>
+                            <span class="xp">1,000 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">7</span>
+                            <span class="name">@Goose</span>
+                            <span class="xp">1,000 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">8</span>
+                            <span class="name">@SweetieSwan</span>
+                            <span class="xp">1,000 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">9</span>
+                            <span class="name">@Eagle</span>
+                            <span class="xp">990 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">10</span>
+                            <span class="name">@Ducky</span>
+                            <span class="xp">990 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">11</span>
+                            <span class="name">@Anaconda</span>
+                            <span class="xp">980 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">12</span>
+                            <span class="name">@Crocodile</span>
+                            <span class="xp">970 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">13</span>
+                            <span class="name">@Puppy</span>
+                            <span class="xp">960 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">14</span>
+                            <span class="name">@BunnyBear</span>
+                            <span class="xp">965 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">15</span>
+                            <span class="name">@CheshireCat</span>
+                            <span class="xp">950 XP</span>
+                        </div>
+                        <div class="top-player">
+                            <span class="rank">16</span>
+                            <span class="name">@SillyStar</span>
+                            <span class="xp">940 XP</span>
+                        </div>
+                    </div>
+                    <div class="your-position">
+                        <span>Your rank: <strong>#42</strong> (80 XP to next tier)</span>
+                    </div>
+                    <button class="view-all-btn">View Full Leaderboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
     
+    <script src="/scripts/maincontent.js"></script>
 </body>
 </html>

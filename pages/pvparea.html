@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaQuest: PVP Area</title>
+    <link rel="stylesheet" href="/stylesheets/pvparea.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.min.js"></script>
+</head>
+<body>
+    <div class="sidebar-container">
+        <img src="/images/logo-icon.png"><br>
+        <h1>LinguaQuest</h1>
+        <br>
+        <p>General</p>
+        <div>
+            <a onclick="clickDashboard()"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
+            <a onclick="clickLessons()"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
+            <a onclick="clickNotifications()"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
+            <a class="selected green"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
+            <a onclick="clickProfile()"><i class="fa-solid fa-user"></i>&emsp;Profile</a>
+        </div>
+        <br>
+        <p>Tools</p>
+        <div>
+            <a onclick="clickSettings()"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
+            <a onclick="clickPremium()" class="premium"><i class="fas fa-crown"></i>&emsp;Premium</a><br>
+            <a onclick="if(confirm('Log out?')){window.location.href='/index.html'}"><i class="fa-solid fa-right-from-bracket"></i>&emsp;Log Out</a>
+        </div>
+    </div>
+
+    <main class="pvp-main">
+        <section id="pvp-header">
+            <h1 id="pvp">PVP</h1><h1 id="area">Area</h1>
+        </section>
+        
+        <!-- Live Events Banner -->
+        <div class="live-events">
+            <div class="live-tag">
+                <div class="pulse"></div>
+                <span>LIVE EVENTS</span>
+            </div>
+            <marquee behavior="scroll" direction="left">
+                🏆 Tournament: Spanish vs. French - Starts in 1h 30m!&emsp;&emsp;•&emsp; 
+                🔥 Hot Streak: @LanguageMaster won 10 duels in a row!&emsp;&emsp;•&emsp;
+                🎉 New Mode: Grammar Gauntlet coming tomorrow!
+            </marquee>
+        </div>
+        
+        <!-- Main Game Modes -->
+        <section id="poster-container">
+            <div class="img-container">
+                <img src="/images/vocab-duels-poster.png" alt="Vocab Duels Poster">
+                <div class="overlay">
+                    <div class="mode-info">
+                        <h3>Live Vocabulary Duels</h3>
+                        <p>1v1 word battles • 50 XP per win</p>
+                        <div class="player-count">
+                            <i class="fas fa-users"></i> 243 linguists online
+                        </div>
+                    </div>
+                    <button onclick="document.getElementById('magic').play()" class="fairy-dust-button">
+                        <i class="fas fa-swords"></i> Join a Server
+                    </button>
+                    <audio src="/audios/magical-click.mp3" id="magic"></audio>
+                </div>
+            </div>
+            
+            <div class="img-container">
+                <img src="/images/team-challenges-poster.png" alt="Team Challenges Poster">
+                <div class="overlay">
+                    <div class="mode-info">
+                        <h3>Team Challenges</h3>
+                        <p>3v3 translation battles • 100 XP per win</p>
+                        <div class="player-count">
+                            <i class="fas fa-users"></i> 187 linguists online
+                        </div>
+                    </div>
+                    <button onclick="document.getElementById('magic').play()" class="fairy-dust-button">
+                        <i class="fas fa-users"></i> Find a Guild
+                    </button>
+                    <audio src="/audios/magical-click.mp3" id="magic"></audio>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Leaderboard Preview -->
+        <div class="leaderboard-preview">
+            <h2><i class="fas fa-trophy"></i> Weekly Champions</h2>
+            <div class="top-players">
+                <div class="player">
+                    <span class="rank">1st</span>
+                    <img src="/images/default_avatar2.png" alt="Gold Avatar">
+                    <span class="name">@PolyglotPro</span>
+                    <span class="xp">1,450 XP</span>
+                </div>
+                <div class="player">
+                    <span class="rank">2nd</span>
+                    <img src="/images/default_avatar3.png" alt="Silver Avatar">
+                    <span class="name">@LinguaQueen</span>
+                    <span class="xp">1,320 XP</span>
+                </div>
+                <div class="player">
+                    <span class="rank">3rd</span>
+                    <img src="/images/default_avatar4.png" alt="Bronze Avatar">
+                    <span class="name">@WordNinja</span>
+                    <span class="xp">1,280 XP</span>
+                </div>
+            </div>
+            <button class="view-all">View Full Leaderboard</button>
+        </div>
+        
+        <!-- Upcoming Events -->
+        <div class="upcoming-events">
+            <h2><i class="fas fa-calendar-star"></i> Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">JUN</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>World Language Cup</h3>
+                        <p>International team tournament</p>
+                        <span class="event-timer"><i class="fas fa-clock"></i> Starts in 3d 2h</span>
+                    </div>
+                    <button class="remind-me">Remind Me</button>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">20</span>
+                        <span class="month">JUN</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Double XP Weekend</h3>
+                        <p>All PVP matches give 2x XP</p>
+                        <span class="event-timer"><i class="fas fa-clock"></i> Starts in 8d</span>
+                    </div>
+                    <button class="remind-me">Remind Me</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="fairyDustContainer"></div>
+    
+    <script src="/scripts/pvparea.js"></script>
+</body>
+</html>

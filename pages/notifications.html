@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaQuest: Notifications</title>
+    <link rel="stylesheet" href="/stylesheets/notifications.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar-container">
+        <img src="/images/logo-icon.png"><br>
+        <h1>LinguaQuest</h1>
+        <br>
+        <p>General</p>
+        <div>
+            <a onclick="clickDashboard()"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
+            <a onclick="clickLessons()"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
+            <a class="selected pink"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
+            <a onclick="clickPvpArea()"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
+            <a onclick="clickProfile()"><i class="fa-solid fa-user"></i>&emsp;Profile</a>
+        </div>
+        <br>
+        <p>Tools</p>
+        <div>
+            <a onclick="clickSettings()"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
+            <a onclick="clickPremium()" class="premium"><i class="fas fa-crown"></i>&emsp;Premium</a><br>
+            <a onclick="if(confirm('Log out?')){window.location.href='/index.html'}"><i class="fa-solid fa-right-from-bracket"></i>&emsp;Log Out</a>
+        </div>
+    </div>
+
+    <main class="notifications-main">
+        <h1>Notifications</h1>
+        <div class="notif-container">
+            <div class="notif-content">
+                <h3>You might want to visit the PVP Area and battle with other players! ⚔️</h3>
+                <p>Rerum necessitatibus saepe eveniet aut et voluptates repudiandae sint et molestiae non recusandae.</p>
+            </div>
+            <div class="notif-date">
+                <small>May 11, 2025 9:00 AM&emsp;🔔</small>
+            </div>
+        </div>
+        <div class="notif-container">
+            <div class="notif-content">
+                <h3>Your started a 5-day streak! 🔥</h3>
+                <p>Rerum necessitatibus saepe eveniet aut et voluptates repudiandae sint et molestiae non recusandae.</p>
+            </div>
+            <div class="notif-date">
+                <small>May 7, 2025 3:11 AM&emsp;🔔</small>
+            </div>
+        </div>
+        <div class="notif-container read">
+            <div class="notif-content">
+                <h3>Are you interested in artsy avatars and shiny UI? 🪩</h3>
+                <p>Rerum necessitatibus saepe eveniet aut et voluptates repudiandae sint et molestiae non recusandae.</p>
+            </div>
+            <div class="notif-date">
+                <small>May 5, 2025 7:11 PM</small>
+            </div>
+        </div>
+        <div class="notif-container read">
+            <div class="notif-content">
+                <h3>Welcome new user! 👋</h3>
+                <p>Rerum necessitatibus saepe eveniet aut et voluptates repudiandae sint et molestiae non recusandae.</p>
+            </div>
+            <div class="notif-date">
+                <small>May 3, 2025 11:11 PM</small>
+            </div>
+        </div>
+    </main>
+
+    <script src="/scripts/maincontent.js"></script>
+</body>
+</html>

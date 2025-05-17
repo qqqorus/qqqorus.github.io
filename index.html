@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinguaQuest - Online Language School</title>
-    <link rel="stylesheet" href="style.css">
+    <title>LinguaQuest: Online Language School</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
@@ -31,10 +31,21 @@
                 <option value="es">Español</option>
                 <option value="th">ไทย</option>
             </select>
-            <button id="login"><a href="pages/login.html">Log In</a></button>
-            <button id="register"><a href="pages/signup.html">Register</a></button>    
+            <button id="login" onclick="clickLogin()">Log In</button>
+            <button id="register" onclick="clickRegister()">Register</button>    
         </nav>
     </header>
+
+    <div id="videoPopup" class="video-popup">
+        <section id="video-head">
+            <p>Watch a message from our CEO! (not rly)</p>
+            <span class="close-video" onclick="closeVideo()">×</span>
+        </section>
+        <video controls width="300">
+            <source src="videos/message-from-ceo.mp4" type="video/mp4">
+            Your browser doesn't support HTML5 video.
+        </video>
+    </div>
 
     <section id="home">
         <div class="title-section">
@@ -49,7 +60,6 @@
                 Earn XP, unlock rewards, and compete with friends while progressing from beginner to fluent. 
                 No textbooks—just playful immersion with AI chatbots, virtual worlds, and real-world challenges.</p>
             <button id="conquest">Start your conquest!</button> 
-            <!-- add animation on click (like confetti) -->
         </div>
         <div class="image-desc">
             <img src="images/hero-img.png" id="hero-img">
@@ -200,7 +210,7 @@
         <div class="questions-container">
             <details>
                 <summary>How do I earn XP and level up?</summary>
-                <div class="questions-det">
+                <div class="questions-details">
                     <p>XP (Experience Points) are earned by completing lessons, winning duels, 
                     and finishing Daily Quests! Leveling up unlocks new avatars, bonus content 
                     (like slang dictionaries), and exclusive challenges. <br><br>
@@ -244,8 +254,9 @@
         </div>
         <div id="form-area">
             <form>
-                <input type="text" placeholder="Enter Your Email"><br>
-                <button type="submit" id="subscribeButton">Subscribe</button>
+                <input type="email" placeholder="Enter Your Email"><br>
+                <button type="submit" id="subscribeButton" onclick="document.getElementById('confetti').play()">Subscribe</button>
+                <audio src="/audios/confetti.mp3" id="confetti"></audio>
             </form>
         </div>
         <div id="subscriptionSuccessPopup" class="popup">
@@ -288,6 +299,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

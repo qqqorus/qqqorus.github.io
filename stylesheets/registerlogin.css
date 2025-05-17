@@ -1,0 +1,371 @@
+* {
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+
+    h1 {
+        text-align: center;
+        font-family: 'Lexend Exa';
+        color: #363555;
+        font-size: 2.6em;
+        border-radius: 60px;
+        display: inline-block;
+        margin: 0;
+        padding: 10px 20px;
+        border: 1px solid #363555;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main-register {
+    padding: 40px;
+    background-color: #fd92c8;
+    margin: 0;
+    height: 100vh;
+}
+
+#main-login {
+    padding: 40px;
+    background-color: #ffe586;
+    margin: 0;
+    height: 100vh;
+}
+
+.register-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 3px 3px 10px #000;
+
+    .register {
+        height: 100%;
+        width: 50%;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fcefdc;
+        gap: 10px;
+        border-radius: 50px 0px 0px 50px;
+
+        #create {
+            background-color: #00a2e9;
+            color: #fff;
+        }
+
+        #an {
+            background-color: #ffe586;
+            color: #235d8e;
+        }
+
+        #account {
+            background-color: #85f1cb;
+            color: #fff;
+        }
+
+        form {
+            padding: 0;
+            text-align: center;
+        }
+
+        input {
+            width: 400px;
+            font-size: 1.3em;
+            border-radius: 30px;
+            padding: 10px 30px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            transition: transform 1s ease-in;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 1px 2px 0 #0000000d;
+            margin: 3px;
+
+            &:hover {
+                box-shadow: 0 10px 15px -3px #0000001a;
+                border-color: #ecb132;
+                cursor: text;
+            }
+            
+            &:focus {
+                outline: 2px solid #ecb132;
+                outline-offset: 2px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        
+            button {
+                width: max-content;
+            }
+        }
+
+        button {
+            width: 200px;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 30px 0px;
+            color: #fff;
+            font-weight: 500;
+            background: #da9e19;
+            border: 1px outset #ecb132;
+            box-shadow: -4px 4px #363555;
+
+            &:hover {
+                background-color: #d59303;
+                color: #fff;
+                box-shadow: -2px 2px 2px #363555;
+                cursor: pointer;  
+            }
+        }
+    }
+    
+    .login-redirect {
+        background-color: #2ca1c8;
+        height: 100%;
+        width: 50%;
+        padding: 50px;
+        border-radius: 0px 50px 50px 0px;
+
+        #logo-container {
+            img {
+                height: 70px;
+                top: 0;
+                display: block;
+                margin: 0px auto;
+            }
+        }
+
+        #text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80%;
+        }
+
+        h1 {
+            color: #fcefdc;
+            border: 1px solid #fcefdc;
+
+            &#hola {
+                background-color: #fd92c8;
+                color: #fff;
+            }
+        }
+
+        p {
+            font-size: 1.3em;
+            margin: 30px 0px 5px;
+            color: #fcefdc;
+        }
+
+        button {
+            width: 100px;
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 30px;
+            margin: 10px;
+            color: #fff;
+            font-weight: 500;
+            background: none;
+            border: 2px outset #fff;
+
+            &:hover {
+                color: #fff;
+                cursor: pointer;  
+            }
+
+            &:active {
+                border: 2px inset #fff;
+            }
+        }
+    }
+
+    .login {
+        height: 100%;
+        width: 50%;
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fcefdc;
+        gap: 10px;
+        border-radius: 0px 50px 50px 0px;
+
+        #log {
+            background-color: #fd92c8;
+            color: #fff;
+        }
+
+        #in {
+            background-color: #00a2e9;
+            color: #fff;
+        }
+
+        form {
+            padding: 0;
+            text-align: center;
+
+            small:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        input {
+            width: 400px;
+            font-size: 1.3em;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 3px;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            transition: transform 1s ease-in;
+            z-index: 10;
+            border: 1px solid #d1d5db;
+            box-shadow: 0 1px 2px 0 #0000000d;
+            
+            &:hover {
+                box-shadow: 0 10px 15px -3px #0000001a;
+                border-color: #ecb132;
+                cursor: text;
+            }
+            
+            &:focus {
+                outline: 2px solid #ecb132;
+                outline-offset: 2px;
+            }
+        }
+
+        button {
+            width: 200px;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 30px 0px 0px;
+            color: #fff;
+            font-weight: 500;
+            background: #da9e19;
+            border: 1px outset #ecb132;
+            box-shadow: -4px 4px #363555;
+
+            &:hover {
+                background-color: #d59303;
+                color: #fff;
+                box-shadow: -2px 2px 2px #363555;
+                cursor: pointer;  
+            }
+        }
+    }
+
+    .register-redirect {
+        background-color: #2ca1c8;
+        height: 100%;
+        width: 50%;
+        padding: 50px;
+        border-radius: 50px 0px 0px 50px;
+
+        #logo-container {
+            img {
+                height: 70px;
+                top: 0;
+                display: block;
+                margin: 0px auto;
+            }
+        }
+
+        #text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80%;
+        }
+
+        h1 {
+            color: #fcefdc;
+            border: 1px solid #fcefdc;
+
+            &#bienvenue {
+                background-color: #ffe586;
+                color: #235d8e;
+            }
+        }
+
+        p {
+            font-size: 1.3em;
+            margin: 30px 0px 5px;
+            color: #fcefdc;
+        }
+
+        button {
+            width: 100px;
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 30px;
+            margin: 10px;
+            color: #fff;
+            font-weight: 500;
+            background: none;
+            border: 2px outset #fff;
+
+            &:hover {
+                color: #fff;
+                cursor: pointer;  
+            }
+
+            &:active {
+                border: 2px inset #fff;
+            }
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            height: 100px;
+        }
+    }
+
+    small {
+        color: #999999;
+    }
+}
+
+#account-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    .brands {
+        font-size: 1.5em;
+        margin: 10px 0px;
+
+        &:visited {
+            color: #363555;
+        }
+
+        :hover {
+            cursor: pointer;
+            color: #999999;
+        }
+    }
+}

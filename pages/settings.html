@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaQuest: Settings</title>
+    <link rel="stylesheet" href="/stylesheets/settings.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Exa:wght@100..900|Lexend:wght@100..900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar-container">
+        <img src="/images/logo-icon.png"><br>
+        <h1>LinguaQuest</h1>
+        <br>
+        <p>General</p>
+        <div>
+            <a onclick="clickDashboard()"><i class="fa-solid fa-table-columns"></i>&emsp;Dashboard</a>
+            <a onclick="clickLessons()"><i class="fa-solid fa-list-check"></i>&emsp;Lessons</a>
+            <a onclick="clickNotifications()"><i class="fa-solid fa-bell"></i>&emsp;Notifications</a>
+            <a onclick="clickPvpArea()"><i class="fa-solid fa-gamepad"></i>&emsp;PVP Area</a>
+            <a onclick="clickProfile()"><i class="fa-solid fa-user"></i>&emsp;Profile</a>
+        </div>
+        <br>
+        <p>Tools</p>
+        <div>
+            <a class="selected pink"><i class="fa-solid fa-gears"></i>&emsp;Settings</a>
+            <a onclick="clickPremium()" class="premium"><i class="fas fa-crown"></i>&emsp;Premium</a><br>
+            <a onclick="if(confirm('Log out?')){window.location.href='/index.html'}"><i class="fa-solid fa-right-from-bracket"></i>&emsp;Log Out</a>
+        </div>
+    </div>
+
+    <main class="settings-main">
+        <h1>Settings</h1>
+        <div>
+            <h2>Gameplay Preferences</h2>
+            <div id="first-row">
+                <div id="difficulty">
+                    <small>&emsp;Difficulty Mode</small><br>
+                        <div class="setting-cat">
+                            <label for="casual"><p>Casual&ensp;</p></label>
+                            <input type="radio" id="casual" name="difficulty" checked>&emsp;&emsp;
+                            <label for="hardcore"><p>Hardcore&ensp;</p></label>
+                            <input type="radio" id="hardcore" name="difficulty">
+                        </div><br><br>
+                </div>
+                <div id="quest">
+                    <small>&emsp;Quest Notifications</small><br>
+                        <div>
+                            <p>Daily Reminders&ensp;</p>
+                                <input type="checkbox" checked>&emsp;&emsp;
+                            <p>Email Notifications&ensp;</p>
+                                <input type="checkbox" checked>
+                        </div><br><br>
+                </div>
+            </div>
+            <small>&emsp;Sound & Music</small><br>
+                <div>
+                    <p>Victory Jingles&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Keyboard SFX&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Background Music&ensp;</p>
+                        <input type="checkbox" checked>
+                </div><br><br>
+            <small>&emsp;Theme</small><br>
+                <div>
+                    <p>Site Theme:&ensp;</p>
+                    <select>
+                        <option value="Light Mode" selected>Light Mode</option>
+                        <option value="Dark Mode">Dark Mode</option>
+                    </select>&emsp;&emsp;
+                    <p>Language:&ensp;</p>
+                    <select>
+                        <option value="English" selected>English</option>
+                        <option value="Arabic">Arabic</option>
+                        <option value="German">German</option>
+                        <option value="Filipino">Filipino</option>
+                        <option value="French">French</option>
+                        <option value="Greek">Greek</option>
+                        <option value="Russian">Russian</option>
+                    </select>&emsp;&emsp;
+                    <p>Timezone:&ensp;</p>
+                    <select>
+                        <option value="UTC+1" selected>UTC+1/GMT+1</option>
+                        <option value="UTC+8">UTC+8/GMT+8</option>
+                        <option value="UTC+3">UTC+3/GMT+3</option>
+                    </select>
+                </div>
+        </div>
+            <hr>
+        <div>
+            <h2>Social & Safety</h2>
+            <small>&emsp;Chat Controls</small><br>
+                <div class="setting-cat">
+                    <p>Voice Chat&ensp;</p>
+                        <input type="checkbox" checked>&emsp;&emsp;
+                    <p>Mute Chat&ensp;</p>
+                        <input type="checkbox">&emsp;&emsp;
+                    <p>Block Players:&ensp;</p>
+                        <input type="text" placeholder="Enter user ID">
+                        <button type="submit">Submit</button>
+                </div>
+        </div>
+            <hr>
+        <div>
+            <h2>Data & Security</h2>
+            <small>&emsp;Delete Account</small><br>
+                <div>
+                    <p>This will erase your Level and Status FOREVER. Are you sure?&ensp;</p>
+                    <button type="submit" id="delete">Delete Account</button>
+                </div>
+        </div>
+    </main>
+    
+    <script src="/scripts/maincontent.js"></script>
+</body>
+</html>

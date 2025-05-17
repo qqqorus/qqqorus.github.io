@@ -1,0 +1,490 @@
+* {
+    font-family: 'Lexend', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: default;
+
+    h1 {
+        text-align: center;
+        font-family: 'Lexend Exa';
+        color: #363555;
+        font-size: 3em;
+        border-radius: 60px;
+        display: inline-block;
+        margin: 0;
+        padding: 10px 20px;
+        border: 1px solid #363555;
+    }
+}
+
+body {
+    background-color: #faf4e4;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.sidebar-container {
+    background-color: #000;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    border-radius: 30px;
+    padding: 35px;
+    margin: 0;
+    width: 15%;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    img {
+        height: 60px;
+        display: block;
+        margin: 0px auto;
+    }
+}
+
+h1 {
+    color: #fff;
+    margin: 0px;
+    font-size: 1em;
+    display: inline-block;
+    border: 1px solid #fff;
+}
+
+p {
+    color: #999;
+    margin: 10px 0px;
+    font-size: .9em;
+}
+
+div {
+    list-style-type: none;
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    a {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    
+        &:hover:not(.selected) {
+            color: #999;
+            cursor: pointer;
+        }
+    }
+}
+
+.selected {
+    border-radius: 30px;
+    width: 100%;
+    animation: moveSelectorDown 1s ease;
+}
+
+.pink {
+    background-color: #fd92c8;
+}
+
+.green {
+    background-color: #85f1cb;
+    color: #363555;
+}
+
+.yellow {
+    background-color: #ffe586;
+    color: #363555;
+}
+
+.blue {
+    background-color: #00a2e9;
+}
+
+
+@keyframes moveSelectorDown {
+    0% {transform: translateY(0%)}
+    50% {transform: translateY(10%);}
+    100% {transform: translateY(0%);}
+}
+
+.premium:not(.selected) {
+    animation: premiumColor 3s infinite;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+@keyframes premiumColor {
+    20% {color: #ffb62c;}
+    40% {color: #fe881e;}
+    60% {color: #f45f72;}
+    80% {color: #975cf6;}
+    100% {color: #ec93ed;}
+
+}
+
+/* START OF PROFILE STYLE */
+
+.profile-main {
+    margin-left: 17%;
+    height: 94vh;
+    padding: 30px;
+    background: radial-gradient(#ffffffab 0%, #ffffffab 50%, #2ca1c8ab 100%);
+    border-radius: 30px;
+    overflow-y: auto;
+
+    h1 {
+        color: #fff;
+        border: 1px solid #363555;
+        font-size: 2.5em;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    #profile-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        #your {
+            background-color: #00a2e9;
+        }
+
+        #profile {
+            background-color: #fd92c8;
+        }
+    }
+}
+
+.profile-columns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: radial-gradient(#ffffff8e 0%, #ffffffab 50%, #aeebff 75%, #2ca1c8 100%);
+}
+
+.profile-column {
+    flex: 1;
+    padding: 25px;
+}
+
+.user-info {
+    max-width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.avatar-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #00a2e9;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.avatar-container h2 {
+    color: #363555;
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.avatar-container .title {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.xp-bar {
+    background: #f0f0f0;
+    height: 20px;
+    border-radius: 10px;
+    margin: 0;
+    position: relative;
+}
+
+.xp-bar .progress {
+    background: linear-gradient(90deg, #00a2e9, #2ca1c8);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.xp-bar span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.avatar-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.avatar-actions button {
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 70%;
+}
+
+.upload-btn {
+    background: #363555;
+    color: white;
+}
+
+.upload-btn:hover {
+    background: #4d4a7a;
+}
+
+.delete-btn {
+    background: #ff4757;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #ff6b81;
+}
+
+.premium-btn {
+    background: linear-gradient(90deg, #ffb62c, #fe881e, #ffb62c);
+    color: #fff;
+}
+
+.premium-btn:hover {
+    transform: scale(1.02);
+}
+
+.profile-details {
+    margin: 0;
+}
+
+.detail-item {
+    margin: 0;
+}
+
+.detail-item small {
+    color: #777;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.detail-item p {
+    color: #363555;
+    font-size: 1.4em;
+    margin: 5px 0;
+}
+
+.gender-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 1.4em;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #999;
+    margin: 20px 0;
+}
+
+/* Achievements Column */
+.achievements {
+    max-width: 600px;
+}
+
+.achievement-section {
+    margin: 10px 0px;
+}
+
+.achievement-section h2 {
+    color: #363555;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.streak-display {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: rgba(255, 182, 44, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+.flame-badge {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+.flame-badge img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.flame-badge span {
+    display: block;
+    font-weight: bold;
+    color: #ffb62c;
+    margin: 5px 0px 0px;
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 0px;
+}
+
+.badge {
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.badge:hover {
+    transform: scale(1.05);
+}
+
+.badge img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: auto;
+}
+
+.badge::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #363555;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.badge:hover::after {
+    opacity: 1;
+}
+
+
+
+.achievements-list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.achievement img {
+    width: 100px;
+    height: 100px;
+}
+
+.achievement h3 {
+    color: #363555;
+    margin: 0 0 5px 0;
+    font-size: 2em;
+}
+
+.achievement p {
+    color: #666;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.achievement small {
+    color: #999;
+    font-size: 1.3em;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .profile-columns {
+        flex-direction: column;
+    }
+    
+    .user-info, .achievements {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-main {
+        padding: 20px 15px;
+    }
+    
+    .profile-column {
+        padding: 20px;
+    }
+    
+    .avatar-container img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
