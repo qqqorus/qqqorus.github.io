@@ -19,7 +19,7 @@
 body {
     background-color: #faf4e4;
     padding: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .sidebar-container {

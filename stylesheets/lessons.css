@@ -19,7 +19,7 @@
 body {
     background-color: #faf4e4;
     padding: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .sidebar-container {
@@ -490,7 +490,7 @@ div {
 @media (max-width: 768px) {
     /* Mobile landscape and small tablets */
     body {
-        overflow-x: hidden; /* Prevent horizontal scroll */
+        overflow-x: auto; /* Prevent horizontal scroll */
         padding: 5px; /* Reduce body padding */
     }
     
