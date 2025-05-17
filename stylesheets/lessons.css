@@ -446,3 +446,150 @@ div {
 .reward i {
     font-size: 1.2em;
 }
+
+/* Responsive adjustments for lessons page */
+
+@media (max-width: 1200px) {
+    /* Tablet landscape and small desktop */
+    .sidebar-container {
+        width: 20%; /* Slightly wider sidebar */
+        padding: 25px; /* Less padding */
+    }
+    
+    .lessons-main {
+        margin-left: 22%; /* Adjust main content margin */
+    }
+    
+    .language-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet portrait */
+    .sidebar-container {
+        width: 25%;
+        padding: 20px;
+    }
+    
+    .lessons-main {
+        margin-left: 27%;
+        padding: 20px;
+        
+        #lessons-header h1 {
+            font-size: 2em; /* Smaller header */
+        }
+    }
+    
+    .stats-container {
+        flex-wrap: wrap; /* Wrap stats on smaller screens */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile landscape and small tablets */
+    body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        padding: 5px; /* Reduce body padding */
+    }
+    
+    .sidebar-container {
+        position: relative; /* Change from fixed */
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+        margin-bottom: 15px;
+        border-radius: 15px; /* Smaller radius */
+        padding: 15px;
+    }
+    
+    .lessons-main {
+        margin-left: 0; /* Remove sidebar offset */
+        height: auto; /* Auto height */
+        padding: 15px;
+    }
+    
+    .language-cards {
+        grid-template-columns: 1fr; /* Single column */
+    }
+    
+    .challenge-card {
+        flex-direction: column; /* Stack challenge content */
+        text-align: center;
+        gap: 15px;
+    }
+    
+    /* Adjust progress container */
+    .progress-container {
+        flex-direction: column; /* Stack progress elements */
+        align-items: flex-start;
+    }
+    
+    .outer {
+        max-width: 100%; /* Full width progress */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile portrait */
+    * h1 {
+        font-size: 2em; /* Smaller base heading */
+    }
+    
+    .lessons-main {
+        #lessons-header {
+            flex-direction: column; /* Stack header words */
+            gap: 10px;
+            
+            h1 {
+                font-size: 1.8em; /* Smaller lesson header */
+            }
+        }
+    }
+    
+    .language-header {
+        flex-direction: column; /* Stack language header */
+        align-items: flex-start;
+        gap: 10px;
+        
+        img {
+            margin-right: 0; /* Remove image margin */
+        }
+    }
+    
+    .level-badge {
+        margin-left: 0; /* Remove auto margin */
+        align-self: flex-start; /* Align badge left */
+    }
+    
+    /* Button adjustments */
+    .continue-btn, 
+    .start-challenge, 
+    .add-btn {
+        padding: 10px; /* Slightly smaller buttons */
+        font-size: 0.9em;
+    }
+}
+
+/* Special cases for very small screens */
+@media (max-width: 400px) {
+    .lessons-main {
+        padding: 10px; /* Less padding */
+    }
+    
+    .language-card-bg {
+        padding: 15px; /* Less card padding */
+    }
+    
+    .card-blur {
+        padding: 15px;
+    }
+    
+    .category h3 {
+        font-size: 1.2em; /* Smaller category headings */
+    }
+    
+    .category li {
+        font-size: 1em; /* Smaller lesson items */
+    }
+}

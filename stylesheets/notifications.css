@@ -199,3 +199,129 @@ div {
         border: 1px solid #999;
     }
 }
+
+/* responsive adjustments */
+
+@media (max-width: 1200px) {
+    /* Tablet landscape and small desktop */
+    .sidebar-container {
+        width: 20%; /* Slightly wider sidebar */
+        padding: 25px; /* Reduced padding */
+    }
+    
+    .notifications-main {
+        margin-left: 22%; /* Adjust main content margin */
+        padding: 25px; /* Slightly less padding */
+        
+        h1 {
+            font-size: 2em; /* Smaller heading */
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet portrait */
+    .sidebar-container {
+        width: 25%;
+        padding: 20px;
+    }
+    
+    .notifications-main {
+        margin-left: 27%;
+        padding: 20px;
+        
+        .notif-container {
+            padding: 15px 20px; /* Less padding */
+            
+            .notif-content h3 {
+                font-size: 1.2em; /* Smaller notification title */
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile landscape and small tablets */
+    body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        padding: 5px; /* Reduce body padding */
+    }
+    
+    .sidebar-container {
+        position: relative; /* Change from fixed */
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+        margin-bottom: 15px;
+        border-radius: 15px; /* Smaller radius */
+        padding: 15px;
+    }
+    
+    .notifications-main {
+        margin-left: 0; /* Remove sidebar offset */
+        height: auto; /* Auto height */
+        padding: 15px;
+        min-height: 90vh; /* Minimum height */
+        
+        h1 {
+            font-size: 1.8em; /* Smaller heading */
+            margin: 10px 0; /* Less margin */
+            width: 100%; /* Full width */
+            text-align: center; /* Center on mobile */
+        }
+        
+        .notif-container {
+            flex-direction: column; /* Stack notification content */
+            text-align: center; /* Center text */
+            padding: 15px;
+            margin: 10px 0; /* Adjust margins */
+            
+            .notif-content {
+                text-align: center; /* Center content */
+                width: 100%; /* Full width */
+                margin-bottom: 10px;
+            }
+            
+            .notif-date {
+                text-align: center; /* Center date */
+                width: 100%; /* Full width */
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile portrait */
+    .notifications-main {
+        h1 {
+            font-size: 1.6em; /* Even smaller heading */
+            padding: 8px 15px; /* Less padding */
+        }
+        
+        .notif-container {
+            border-radius: 20px; /* Smaller radius */
+            
+            .notif-content {
+                p {
+                    font-size: 1em; /* Smaller text */
+                }
+            }
+            
+            .notif-date small {
+                font-size: 1em; /* Smaller date text */
+            }
+        }
+    }
+}
+
+/* Special cases for very small screens */
+@media (max-width: 400px) {
+    .notifications-main {
+        padding: 10px; /* Less padding */
+        
+        .notif-container {
+            padding: 12px; /* Less padding */
+            margin: 8px 0; /* Less margin */
+        }
+    }
+}
